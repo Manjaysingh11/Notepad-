@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <meta name="description" content="Notepad , online notepad , notepad for android ,etc">
+ <meta name="author" content="Manjay singh">
+ <title>Notepad</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="Logo.PNG">
+</head>
+
+
+<body>
+
+ <div id="a1" class="buttons">
+    <button class="b1" id="openFile"><img class="a4" src="open.png" alt="OPen file"></button>
+    <button class="b1" id="newFile"><img class="a4" src="new-text-file.png" alt="New file"> </button>
+    <button class="b1" id="saveFile"><img class="a4" src="save.png" alt="Save"></button>
+    <button class="b1" id="print"><img class="a6" src="print.png" alt=""></button>
+    <button class="b1" id="undo"><img class="a6" src="undo.png" alt="undo"></button>
+    <button class="b1" id="redo"><img class="a6" src="redo.png" alt="redo"></button>
+    <select class="b2" id="fontSize">
+        <option value="8px">8px</option>
+         <option value="9px">9px</option>
+       <option value="10px">10px</option>
+       <option value="11px">11px</option>
+       <option value="12px">12px</option>
+       <option value="13px">13px</option>
+         <option value="14px">14px</option>
+       <option value="16px">16px</option>
+       <option value="18px">18px</option>
+        <option value="20px">20px</option>
+       <option value="22px">22px</option>   
+       <option value="24px">24px</option>
+       <option value="26px">26px</option>
+       <option value="28px">28px</option>
+
+       </select>
+
+       <a href="ms.html">Theme</a>
+</div>
+
+<main>
+<textarea  id="notepad" placeholder="Start writing..." class="a3" style=" width: 100%;"></textarea>
+</main>
+
+
+
+<script src="script.js"></script>
+</body>
+
+
+</html>
