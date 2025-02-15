@@ -6,46 +6,96 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <meta name="description" content="Notepad , online notepad , notepad for android ,etc">
- <meta name="author" content="Manjay singh">
- <title>Notepad</title>
-<link rel="stylesheet" href="style.css">
+ <title>Notepad pro</title>
+<link rel="stylesheet" href="style1.css">
 <link rel="icon" href="Logo.PNG">
 </head>
 
 
 <body>
+  <div id="a1">
+    <h1 id="c1"><img id="k444" src="Logo.PNG" alt="">Notepad pro</h1>
+
+
+
+</div>
+<hr id="b">
+ <div id="a1">
+  <div class="dropdown">
+    <button class="dropbtn">File</button>
+    <div class="dropdown-content">
+      <button class="b11" id="newFile"><!--img class="a4" id="a44" src="new-text-file1.png" -->New file </button><br>
+      <button class="b11" id="openFile"><!--img class="a4" id="a44" src="open1.png"-->Open file</button><br>
+      <button class="b11" onclick="downloadFile()"><!--img class="a4" id="a44" src="save1.png"-->Save</button><br>
+      <button class="b11" onclick="printDocument()"><!--img class="a6" id="a44" src="print1.png"-->Print</button><br>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Edit</button>
+    <div class="dropdown-content">
+      <button class="b11" id="undo"><!--img class="a6" id="a44" src="undo1.png"-->Undo</button><br>
+      <button class="b11" id="redo"><!--img class="a77" id="a44" src="redo1.png"-->Redo</button><br>
+      <button class="b11" id="redo">Cut</button><br>
+      <button class="b11" id="redo">Copy</button><br>
+      <button class="b11" id="redo">Paste</button><br>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">View</button>
+    <div class="dropdown-content">
+
+     <!--<input class="u444" type="text" id="findText" placeholder="Find"><br>
+      <input class="u444" type="text" id="replaceText" placeholder="Replace"><br>
+      <button onclick="findAndReplace()">Find & Replace</button><br>--> 
+
+      <button  class="b11" onclick="toggleFullscreen()">Fullscreen</button>
+   <br>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Help</button>
+    <div class="dropdown-content">
+      <button class="b11" id="undo"><a href="Instruction.pdf">Instruction</a></button><br>
+    </div>
+  </div>
+   <a href="#">Theme</a>
+   </div>
+   <hr id="b">
+
+
+
 
  <div id="a1" class="buttons">
-    <button class="b1" id="openFile"><img class="a4" src="open.png" alt="OPen file"></button>
-    <button class="b1" id="newFile"><img class="a4" src="file.PNG" alt="New file"> </button>
-    <button class="b1" id="saveFile"><img class="a4" src="save.png" alt="Save"></button>
-    <button class="b1" id="print"><img class="a6" src="print.png" alt=""></button>
-    <button class="b1" id="undo"><img class="a6" src="undo.png" alt="undo"></button>
-    <button class="b1" id="redo"><img class="a6" src="redo.png" alt="redo"></button>
+
+    <button class="b1" id="openFile"><img class="a4" src="open1.png" alt="OPen file"></button>
+    <button class="b1" id="newFile"><img class="a4" src="new-text-file1.png" alt="New file"> </button>
+    <button class="b1" onclick="downloadFile()"><img class="a4" src="save1.png" alt="Save"></button><hc id="c7"></hc>
+    <button class="b1" onclick="printDocument()"><img class="a6" src="print1.png" alt=""></button>
+    <button class="b1" id="undo"><img class="a6" src="undo1.png" alt="undo"></button>
+    <button class="b1" id="redo"><img class="a7" src="redo1.png" alt="redo"></button><hc id="c7"></hc>
     <select class="b2" id="fontSize">
-        <option value="8px">8px</option>
-         <option value="9px">9px</option>
-       <option value="10px">10px</option>
-       <option value="11px">11px</option>
-       <option value="12px">12px</option>
-       <option value="13px">13px</option>
-         <option value="14px">14px</option>
-       <option value="16px">16px</option>
-       <option value="18px">18px</option>
-        <option value="20px">20px</option>
-       <option value="22px">22px</option>   
-       <option value="24px">24px</option>
-       <option value="26px">26px</option>
-       <option value="28px">28px</option>
+        <option class="b4" value="8px">8px</option>
+         <option class="b4" value="9px">9px</option>
+       <option class="b4" value="10px">10px</option>
+       <option class="b4" value="11px">11px</option>
+       <option class="b4" value="12px">12px</option>
+       <option class="b4"value="13px">13px</option>
+         <option class="b4" value="14px">14px</option>
+       <option class="b4" value="16px">16px</option>
+       <option class="b4" value="18px">18px</option>
+        <option class="b4" value="20px">20px</option>
+       <option  class="b4"value="22px">22px</option>   
+       <option class="b4" value="24px">24px</option>
+       <option class="b4" value="26px">26px</option>
+       <option class="b4" value="28px">28px</option>
 
        </select>
-
-       <a href="ms.html">Theme</a>
+    
 </div>
-
+<hr id="b">
 <main>
-<textarea  id="notepad" placeholder="Start writing..." class="a3" style=" width: 100%;"></textarea>
+<textarea  id="editor" placeholder="Start writing..." class="a3" style=""></textarea>
 </main>
 
 
@@ -55,3 +105,4 @@
 
 
 </html>
+
