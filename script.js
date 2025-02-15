@@ -32,10 +32,7 @@ document.getElementById('openFile').addEventListener('click', () => {
     input.click();
 });
 
-// Print functionality
-document.getElementById('print').addEventListener('click', () => {
-        window.print(); // This opens the print dialog
-    });
+
 
     // Undo/Redo functionality
 document.getElementById('undo').addEventListener('click', () => {
@@ -71,3 +68,55 @@ document.getElementById('fontFamily').addEventListener('change', (event) => {
           }
         });
         
+
+        function printDocument() {
+            const text = document.getElementById("editor").value;
+            const printWindow = window.open("", "", );
+            printWindow.document.write("<pre>" + text + "</pre>");
+            printWindow.document.close();
+            printWindow.print();
+        }
+        // Print functionality
+document.getElementById('print').addEventListener('click', () => {
+        window.print(); // This opens the print dialog
+    });
+
+
+    function downloadFile() {
+        const text = document.getElementById("editor").value;
+        
+        // Create a pop-up for user input
+        const fileName = prompt("Enter file name:", "note");
+        const fileExtension = prompt("Enter file extension:", "txt");
+        
+        if (!fileName || !fileExtension) {
+            alert("File name and extension are required!");
+            return;
+        }
+        
+        const blob = new Blob([text], { type: "text/plain" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = `${fileName}.${fileExtension}`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+        } else if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }
+
+
+    
+function findAndReplace() {
+    const findText = document.getElementById("findText").value;
+    const replaceText = document.getElementById("replaceText").value;
+    const editor = document.getElementById("editor");
+    editor.value = editor.value.split(findText).join(replaceText);
+}
+
